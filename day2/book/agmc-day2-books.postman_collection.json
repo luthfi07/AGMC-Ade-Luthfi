@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "d85e8cbd-4f19-4cbd-9174-4110421b52ec",
+		"name": "agmc-day2-books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10792622"
+	},
+	"item": [
+		{
+			"name": "GET Book by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": [
+				{
+					"name": "GET Book by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/books/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 14 Sep 2022 14:03:22 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"book\": {\n        \"Id\": 2,\n        \"Name\": \"Berhitung\",\n        \"Author\": \"Budi\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add New",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Id\" : 3,\n  \"Name\":\"Berdoa\",\n  \"Author\":\"Rika\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add New",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Id\" : 3,\n  \"Name\":\"Berdoa\",\n  \"Author\":\"Rika\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/books",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 14 Sep 2022 14:04:17 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"book\": {\n        \"Id\": 3,\n        \"Name\": \"Berdoa\",\n        \"Author\": \"Rika\"\n    },\n    \"message\": \"Success Create Book\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET All Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/book/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"book",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET All Book",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/books",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 14 Sep 2022 14:05:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "90"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"Id\": 1,\n        \"Name\": \"Berhitung\",\n        \"Author\": \"Budi\"\n    },\n    {\n        \"Id\": 2,\n        \"Name\": \"Bernyanyi\",\n        \"Author\": \"Budi\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "UPDATE Book by ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Id\": 2,\n   \"Name\": \"Berhitung\",\n   \"Author\": \"Budi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/books/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UPDATE Book by ID",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Id\": 2,\n   \"Name\": \"Berhitung\",\n   \"Author\": \"Budi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/books/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 14 Sep 2022 14:06:29 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"book\": {\n        \"Id\": 2,\n        \"Name\": \"Berhitung\",\n        \"Author\": \"Budi\"\n    },\n    \"message\": \"Success Update Book\"\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE Book by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/book/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"book",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DELETE Book by ID",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/books/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 14 Sep 2022 14:06:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"book\": 0,\n    \"message\": \"Success Delete Book\"\n}"
+				}
+			]
+		}
+	]
+}
